@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
+    <!-- ============================================= -->
+    <!-- CONFIGURAÇÕES E METADADOS DO DOCUMENTO         -->
+    <!-- ============================================= -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Meu Projeto Prático</title>
+
+    <!-- Link para o arquivo CSS (será criado/estilizado em uma aula futura) -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="aba.html"><button>samuel e gay</button>
 
+    <!-- ============================================= -->
+    <!-- CABEÇALHO DO SITE (tag semântica <header>)     -->
+    <!-- Contém: logo, menu de navegação e ações do     -->
+    <!-- usuário (busca e botão de entrar)              -->
+    <!-- ============================================= -->
+    <header class="main-header">
+        <div class="container-header">
 
-    </a>
-    
+            <!-- LOGO: link de navegação que aponta para a Home -->
+            <a href="index.html" class="logo-link">
+                <!-- Atributo "alt" preenchido para acessibilidade -->
+                <img src="logo.png" alt="Logotipo do Meu Projeto" class="logo-img">
+                <span class="logo-text">MeuProjeto</span>
+            </a>
+
+            <!-- NAVEGAÇÃO: menu de links semântico (<nav>) -->
+            <nav class="main-nav">
+                <!-- A classe "active" indica visualmente a página atual -->
+                <a href="index.html" class="nav-link active">Início</a>
+                <a href="sobre.html" class="nav-link">Sobre nós</a>
+                <a href="servicos.html" class="nav-link">Serviços</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+            </nav>
+
+            <!-- AÇÕES DO USUÁRIO: campo de busca e botão CTA -->
+            <div class="header-actions">
+
+                <!-- Campo de busca com ícone SVG de lupa -->
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Buscar...">
+                    <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+
+                <!-- CTA (Call to Action): botão de ação principal do cabeçalho -->
+                <button class="btn-primary" type="button">Entrar</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- ============================================= -->
+    <!-- CONTEÚDO PRINCIPAL DA PÁGINA (tag <main>)      -->
+    <!-- Deve haver apenas UM <main> por página          -->
+    <!-- ============================================= -->
+    <main>
+
+        <!-- SEÇÃO DE BOAS-VINDAS (Hero) -->
+        <!-- Uma "hero section" é o primeiro bloco de destaque -->
+        <!-- da página, geralmente com título, texto e imagem  -->
+        <section class="hero">
+
+            <div class="hero-text">
+                <h1>Bem-vindo ao Meu Projeto!</h1>
+                <p>Conteúdo da página inicial...</p>
+            </div>
+
+            <!-- =========================================== -->
+            <!-- SLOT PARA IMAGEM LOCAL (imagem do seu PC)    -->
+            <!-- =========================================== -->
+            <!--
+                COMO USAR:
+                1. Copie o arquivo de imagem do seu computador para a
+                   mesma pasta onde está este HTML (ou para uma
+                   subpasta, ex: "imagens/").
+                2. Troque "sua-imagem.jpg" pelo nome exato do arquivo,
+                   respeitando maiúsculas/minúsculas e a extensão
+                   (.jpg, .png, .webp etc).
+                3. Se colocar a imagem em uma subpasta, o caminho fica
+                   assim: src="imagens/sua-imagem.jpg"
+                4. Sempre escreva um "alt" descritivo: é o texto lido
+                   por leitores de tela e exibido caso a imagem não
+                   carregue.
+            -->
+            <img
+                src="assets/image.png"
+                alt="Descreva aqui o que a imagem mostra"
+                class="hero-img"
+            >
+
+        </section>
+
+    </main>
+
 </body>
 </html>
